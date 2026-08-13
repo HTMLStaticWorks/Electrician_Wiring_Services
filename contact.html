@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | VoltCore</title>
+    <meta name="description" content="Contact VoltCore to book an electrician, request a quote, or get emergency assistance.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <div class="loader-circuit mb-3"></div>
+        <div class="h4 text-primary font-heading">Establishing Connection...</div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top py-3">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <i data-lucide="zap" class="text-primary" width="32" height="32"></i>
+                <span class="font-heading fw-bold fs-4">VoltCore<span class="text-primary">.</span></span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i data-lucide="menu" class="text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                <ul class="navbar-nav mb-2 mb-lg-0 me-lg-4">
+                    <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Specialized</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="electrical-safety.html">Electrical Safety</a></li>
+                            <li><a class="dropdown-item" href="emergency-electrician.html">Emergency Electrician</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-medium" href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-link p-0 text-muted border border-secondary rounded-circle theme-toggle-btn d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" width="18" height="18"></i></button>
+                    <button class="btn btn-link p-0 text-muted border border-secondary rounded-circle rtl-toggle-btn d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;" aria-label="Toggle RTL"><i data-lucide="arrow-right-left" width="18" height="18"></i></button>
+                    <a href="login.html" class="btn btn-outline-electric d-none d-lg-inline-flex fw-bold px-4">Login</a>
+                    <a href="book-service.html" class="btn btn-electric d-none d-lg-inline-flex fw-bold px-4">Book Service</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero bg-dark text-white position-relative d-flex align-items-center text-center" style="padding-top: 120px; padding-bottom: 80px; min-height: 40vh;">
+            <div class="container position-relative z-1 gsap-fade-up">
+                <h1 class="display-4 fw-bold font-heading mb-3 text-white">Get in <span class="text-primary">Touch</span></h1>
+                <p class="lead text-light max-w-2xl mx-auto mb-0">Book a service, request an estimate, or reach our 24/7 emergency dispatch.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="py-6">
+            <div class="container">
+                <div class="row g-5">
+                    
+                    <!-- Left: Info & Map -->
+                    <div class="col-lg-5 gsap-fade-up d-flex flex-column">
+                        <h3 class="font-heading fw-bold mb-4">Contact Information</h3>
+                        
+                        <div class="d-flex gap-4 mb-4">
+                            <div class="bg-primary text-dark rounded p-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 56px; height: 56px;">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone Number</h6>
+                                <p class="text-muted mb-0">+1 (555) 123-4567 <br><small class="text-primary fw-medium">24/7 Available</small></p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-4 mb-4">
+                            <div class="bg-primary text-dark rounded p-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 56px; height: 56px;">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Email Address</h6>
+                                <p class="text-muted mb-0">service@voltcore.com</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-4 mb-5">
+                            <div class="bg-primary text-dark rounded p-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 56px; height: 56px;">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Headquarters</h6>
+                                <p class="text-muted mb-0">123 Volt Avenue, Tech District<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+
+                        <div class="electric-card p-0 overflow-hidden shadow-sm border-0 flex-grow-1 d-flex flex-column">
+                            <!-- Interactive Map -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343!2d-74.0042587845944!3d40.7517702793275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sNew%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1625695026210!5m2!1sen!2sus" class="flex-grow-1" width="100%" height="100%" style="border:0; min-height: 300px; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="col-lg-7 gsap-fade-up">
+                        <div class="electric-card shadow-lg p-4 p-md-5 bg-card">
+                            <h3 class="font-heading fw-bold mb-4">Send a Message</h3>
+                            
+                            <form class="needs-validation" novalidate>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-medium">First Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control bg-secondary border-0" required>
+                                        <div class="invalid-feedback">Required.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-medium">Last Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control bg-secondary border-0" required>
+                                        <div class="invalid-feedback">Required.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-medium">Phone Number <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control bg-secondary border-0" required>
+                                        <div class="invalid-feedback">Required.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-medium">Email Address</label>
+                                        <input type="email" class="form-control bg-secondary border-0">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-medium">Service Needed <span class="text-danger">*</span></label>
+                                        <select class="form-select bg-secondary border-0" required>
+                                            <option value="" disabled selected>Select an option...</option>
+                                            <option value="residential">Residential Service / Repair</option>
+                                            <option value="commercial">Commercial Estimate</option>
+                                            <option value="emergency">Emergency Request</option>
+                                            <option value="other">Other Inquiry</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a service type.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-medium">Address</label>
+                                        <input type="text" class="form-control bg-secondary border-0" placeholder="Street, City, Zip">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-medium">Message <span class="text-danger">*</span></label>
+                                        <textarea class="form-control bg-secondary border-0" rows="5" required placeholder="How can we help you?"></textarea>
+                                        <div class="invalid-feedback">Please provide details.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-electric btn-lg w-100">Send Request</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        <!-- FAQ Section -->
+        <section class="py-6 bg-secondary">
+            <div class="container gsap-fade-up">
+                <div class="text-center mb-5">
+                    <h2 class="font-heading fw-bold">Frequently Asked Questions</h2>
+                    <p class="text-dark max-w-2xl mx-auto">Have questions? We have answers. Find out more about our services, pricing, and safety guarantees.</p>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            <!-- Question 1 -->
+                            <div class="accordion-item bg-card border-secondary mb-3 rounded shadow-sm overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-body bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        Do you offer 24/7 emergency electrical services?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted border-top border-secondary">
+                                        Yes, our emergency dispatch team is available 24/7. We aim to have a technician at your location within 60 minutes for critical issues like power outages or electrical hazards.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 2 -->
+                            <div class="accordion-item bg-card border-secondary mb-3 rounded shadow-sm overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-body bg-transparent collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        Are your electricians licensed and insured?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted border-top border-secondary">
+                                        Absolutely. Every VoltCore technician is fully licensed, bonded, and insured. We conduct thorough background checks and require ongoing safety training.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 3 -->
+                            <div class="accordion-item bg-card border-secondary mb-3 rounded shadow-sm overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-body bg-transparent collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        Do you provide free estimates?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted border-top border-secondary">
+                                        We provide free, no-obligation estimates for large projects like panel upgrades, house rewiring, and commercial installations. For standard troubleshooting, our standard service call fee applies.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 4 -->
+                            <div class="accordion-item bg-card border-secondary mb-3 rounded shadow-sm overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-body bg-transparent collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        What kind of warranty do you offer on your work?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted border-top border-secondary">
+                                        We back all of our workmanship with a lifetime guarantee. Any parts or materials we supply are covered by a minimum 1-year warranty, in addition to any manufacturer guarantees.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 5 -->
+                            <div class="accordion-item bg-card border-secondary mb-3 rounded shadow-sm overflow-hidden">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-body bg-transparent collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                        How quickly can you upgrade my electrical panel?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted border-top border-secondary">
+                                        A standard panel upgrade usually takes one full day to complete. We handle all necessary permitting and coordinate with your local utility company to ensure minimal downtime.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-darker pt-6 pb-4 position-relative overflow-hidden border-top" style="border-color: #334155 !important;">
+        <div class="hero-bg-grid" style="opacity: 0.05;"></div>
+        <div class="container position-relative z-1 pt-5">
+            <div class="row g-5 mb-5">
+                <div class="col-12 col-lg-4">
+                    <a class="d-flex align-items-center gap-2 text-decoration-none mb-4" href="index.html">
+                        <i data-lucide="zap" class="text-primary" width="32" height="32"></i>
+                        <span class="font-heading fw-bold fs-4" style="color: var(--text-heading);">VoltCore<span class="text-primary">.</span></span>
+                    </a>
+                    <p class="text-muted small pe-lg-4">Premium electrical services for residential and commercial properties. Safe, reliable, and powered by innovation.</p>
+                    <div class="d-flex gap-3 mt-4">
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.1C2.5 7.1 2 9.5 2 12c0 2.5.5 4.9.5 4.9.3 1.2 1.3 2.1 2.5 2.4C7.5 20 12 20 12 20s4.5 0 7-.7c1.2-.3 2.2-1.2 2.5-2.4.5-2.4.5-4.9.5-4.9 0-2.5-.5-4.9-.5-4.9-.3-1.2-1.3-2.1-2.5-2.4C16.5 4 12 4 12 4s-4.5 0-7 .7c-1.2.3-2.2 1.2-2.5 2.4z"/><path d="m10 15 5-3-5-3v6z"/></svg>
+                          </a>
+                      </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Home Wiring</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Panel Upgrades</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Smart Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Lighting</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Commercial</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none hover-primary">About Us</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-muted text-decoration-none hover-primary">Pricing</a></li>
+                        <li class="mb-2"><a href="electrical-safety.html" class="text-muted text-decoration-none hover-primary">Safety Guide</a></li>
+                        <li class="mb-2"><a href="emergency-electrician.html" class="text-muted text-decoration-none hover-primary">Emergency</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none hover-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="map-pin" class="text-primary flex-shrink-0"></i>
+                            <span>123 Volt Avenue, Tech District<br>New York, NY 10001</span>
+                        </li>
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="phone" class="text-primary flex-shrink-0"></i>
+                            <span>+1 (555) 123-4567<br><small class="text-primary">24/7 Emergency Line</small></span>
+                        </li>
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="mail" class="text-primary flex-shrink-0"></i>
+                            <span>service@voltcore.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pt-4 border-top" style="border-color: #1e293b !important;">
+                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-muted small mb-0">&copy; 2026 VoltCore Electrical Services. All rights reserved.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted small text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

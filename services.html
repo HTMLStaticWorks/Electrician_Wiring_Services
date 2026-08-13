@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | VoltCore Electrical</title>
+    <meta name="description" content="Comprehensive electrical services for residential, commercial, and industrial properties.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <div class="loader-circuit mb-3"></div>
+        <div class="h4 text-primary font-heading">Loading Services...</div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top py-3">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <i data-lucide="zap" class="text-primary" width="32" height="32"></i>
+                <span class="font-heading fw-bold fs-4">VoltCore<span class="text-primary">.</span></span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i data-lucide="menu" class="text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                <ul class="navbar-nav mb-2 mb-lg-0 me-lg-4">
+                    <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-medium" href="services.html">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Specialized</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="electrical-safety.html">Electrical Safety</a></li>
+                            <li><a class="dropdown-item" href="emergency-electrician.html">Emergency Electrician</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-link p-0 text-muted border border-secondary rounded-circle theme-toggle-btn d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" width="18" height="18"></i></button>
+                    <button class="btn btn-link p-0 text-muted border border-secondary rounded-circle rtl-toggle-btn d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;" aria-label="Toggle RTL"><i data-lucide="arrow-right-left" width="18" height="18"></i></button>
+                    <a href="login.html" class="btn btn-outline-electric d-none d-lg-inline-flex">Login</a>
+                    <a href="book-service.html" class="btn btn-electric d-none d-lg-inline-flex">Book Service</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero bg-dark text-white position-relative d-flex align-items-center text-center" style="padding-top: 120px; padding-bottom: 80px; min-height: 40vh;">
+            <div class="container position-relative z-1 gsap-fade-up">
+                <h1 class="display-4 fw-bold font-heading mb-3 text-white">Our <span class="text-primary">Services</span></h1>
+                <p class="lead text-light max-w-2xl mx-auto mb-0">From complex commercial infrastructure to residential smart home upgrades, we power it all.</p>
+            </div>
+        </section>
+
+        <!-- COMPREHENSIVE SERVICES (8 Cards) -->
+        <section class="py-6 bg-secondary">
+            <div class="container">
+                <div class="text-center mb-5 gsap-fade-up">
+                    <h2 class="font-heading fw-bold">Full-Spectrum Capabilities</h2>
+                </div>
+                
+                <div class="row g-4 gsap-stagger-container">
+                    <div class="col-12 col-md-6 col-lg-3 gsap-stagger-item">
+                        <div class="electric-card p-0 d-flex flex-column h-100 overflow-hidden">
+                            <img src="assets/images/Wiring & Rewiring.png" alt="Wiring & Rewiring" class="w-100" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h5 class="fw-bold mb-2">Wiring & Rewiring</h5>
+                                <p class="text-muted small mb-0">Complete whole-property rewiring using modern, safe copper wiring systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 gsap-stagger-item">
+                        <div class="electric-card p-0 d-flex flex-column h-100 overflow-hidden">
+                            <img src="assets/images/Panel Upgrades2.png" alt="Panel Upgrades" class="w-100" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h5 class="fw-bold mb-2">Panel Upgrades</h5>
+                                <p class="text-muted small mb-0">Upgrade to 200A or 400A panels to support modern appliances and EV chargers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 gsap-stagger-item">
+                        <div class="electric-card p-0 d-flex flex-column h-100 overflow-hidden">
+                            <img src="assets/images/Lighting Design.png" alt="Lighting Design" class="w-100" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h5 class="fw-bold mb-2">Lighting Design</h5>
+                                <p class="text-muted small mb-0">Architectural interior lighting and exterior landscape lighting solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 gsap-stagger-item">
+                        <div class="electric-card p-0 d-flex flex-column h-100 overflow-hidden">
+                            <img src="assets/images/EV Charging.png" alt="EV Charging" class="w-100" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h5 class="fw-bold mb-2">EV Charging</h5>
+                                <p class="text-muted small mb-0">Level 2 and DC fast charging station installation for homes and businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 gsap-stagger-item">
+                        <div class="electric-card p-0 d-flex flex-column h-100 overflow-hidden">
+                            <img src="assets/images/Data Cabling.png" alt="Data Cabling" class="w-100" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h5 class="fw-bold mb-2">Data Cabling</h5>
+                                <p class="text-muted small mb-0">Cat6 and fiber optic networking for high-speed reliable connectivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 gsap-stagger-item">
+                        <div class="electric-card p-0 d-flex flex-column h-100 overflow-hidden">
+                            <img src="assets/images/Surge Protection.png" alt="Surge Protection" class="w-100" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h5 class="fw-bold mb-2">Surge Protection</h5>
+                                <p class="text-muted small mb-0">Whole-house surge protectors to defend sensitive electronics from strikes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 gsap-stagger-item">
+                        <div class="electric-card p-0 d-flex flex-column h-100 overflow-hidden">
+                            <img src="assets/images/HVAC Electrical.png" alt="HVAC Electrical" class="w-100" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h5 class="fw-bold mb-2">HVAC Electrical</h5>
+                                <p class="text-muted small mb-0">Dedicated circuits and wiring for heavy-duty HVAC systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 gsap-stagger-item">
+                        <div class="electric-card p-0 d-flex flex-column h-100 overflow-hidden">
+                            <img src="assets/images/Smart Home Tech.png" alt="Smart Home Tech" class="w-100" style="height: 200px; object-fit: cover;">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h5 class="fw-bold mb-2">Smart Home Tech</h5>
+                                <p class="text-muted small mb-0">Integration of smart switches, automated blinds, and security cameras.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMERCIAL & RESIDENTIAL FOCUS (2x4 Cards) -->
+        <section class="py-6">
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Commercial -->
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center gap-3 mb-4 gsap-fade-up">
+                            <div class="bg-primary text-dark p-2 rounded"><i data-lucide="building-2"></i></div>
+                            <h3 class="font-heading fw-bold mb-0">Commercial Focus</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="bg-card p-4 rounded-3 border border-secondary shadow-sm h-100">
+                                    <h5 class="fw-bold">Retail Fit-outs</h5>
+                                    <p class="small text-muted mb-0">Custom lighting and POS wiring.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="bg-card p-4 rounded-3 border border-secondary shadow-sm h-100">
+                                    <h5 class="fw-bold">Office Spaces</h5>
+                                    <p class="small text-muted mb-0">Workstation power and data grids.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="bg-card p-4 rounded-3 border border-secondary shadow-sm h-100">
+                                    <h5 class="fw-bold">Industrial</h5>
+                                    <p class="small text-muted mb-0">3-phase power, heavy machinery.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="bg-card p-4 rounded-3 border border-secondary shadow-sm h-100">
+                                    <h5 class="fw-bold">Maintenance</h5>
+                                    <p class="small text-muted mb-0">Routine commercial SLA contracts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Residential -->
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center gap-3 mb-4 gsap-fade-up">
+                            <div class="bg-primary text-dark p-2 rounded"><i data-lucide="home"></i></div>
+                            <h3 class="font-heading fw-bold mb-0">Residential Focus</h3>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="bg-card p-4 rounded-3 border border-secondary shadow-sm h-100">
+                                    <h5 class="fw-bold">New Builds</h5>
+                                    <p class="small text-muted mb-0">Complete electrical for new homes.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="bg-card p-4 rounded-3 border border-secondary shadow-sm h-100">
+                                    <h5 class="fw-bold">Remodels</h5>
+                                    <p class="small text-muted mb-0">Updating wiring for renovations.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="bg-card p-4 rounded-3 border border-secondary shadow-sm h-100">
+                                    <h5 class="fw-bold">Troubleshooting</h5>
+                                    <p class="small text-muted mb-0">Finding and fixing phantom faults.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="bg-card p-4 rounded-3 border border-secondary shadow-sm h-100">
+                                    <h5 class="fw-bold">Outdoors</h5>
+                                    <p class="small text-muted mb-0">Pools, spas, and patio lighting.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="py-6 bg-secondary">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 gsap-fade-up">
+                        <h2 class="font-heading fw-bold mb-4">Why Choose VoltCore</h2>
+                        <p class="opacity-75 mb-5">We deliver peace of mind with every project through our commitment to quality, safety, and reliability. Here is why clients trust us.</p>
+                        
+                        <div class="d-flex flex-column gap-4">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary flex-shrink-0">
+                                    <i data-lucide="award" width="24" height="24"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Certified Experts</h5>
+                                    <p class="opacity-75 small mb-0">Our team consists of fully licensed, insured, and highly trained master electricians.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary flex-shrink-0">
+                                    <i data-lucide="clock" width="24" height="24"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Fast Response</h5>
+                                    <p class="opacity-75 small mb-0">We offer 24/7 emergency services to ensure your electrical issues are resolved immediately.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary flex-shrink-0">
+                                    <i data-lucide="tag" width="24" height="24"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Transparent Pricing</h5>
+                                    <p class="opacity-75 small mb-0">No hidden fees or surprise charges. You'll know the exact cost before we start any work.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 gsap-fade-up">
+                        <div class="position-relative ms-lg-4">
+                            <img src="assets/images/Quality Materials.png" alt="VoltCore Quality" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 550px; object-fit: cover; object-position: center;">
+                            <div class="position-absolute bottom-0 start-0 translate-middle-y bg-primary text-dark p-4 rounded-3 shadow-lg ms-4 d-none d-sm-block mb-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-dark text-primary rounded-circle p-2 d-flex align-items-center justify-content-center">
+                                        <i data-lucide="shield-check" width="32" height="32"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="fw-bold mb-0">100%</h4>
+                                        <p class="small mb-0 fw-medium">Guaranteed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-6">
+            <div class="container gsap-fade-up">
+                <div class="bg-darker rounded-4 shadow-lg p-5 text-center position-relative overflow-hidden border" style="border-color: #334155 !important;">
+                    <div class="hero-bg-grid" style="opacity: 0.1;"></div>
+                    <div class="position-relative z-1 py-4">
+                        <h2 class="font-heading fw-bold mb-4">Need an estimate?</h2>
+                        <p class="lead opacity-75 mb-4 max-w-2xl mx-auto">Get a transparent, no-obligation quote for your next electrical project.</p>
+                        <div class="d-flex justify-content-center flex-wrap gap-3 mobile-btn-stack">
+                            <a href="contact.html" class="btn btn-electric btn-lg px-5">Request Quote</a>
+                            <a href="tel:+1234567890" class="btn btn-outline-dark border-2 btn-lg px-5">Call Us Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-darker pt-6 pb-4 position-relative overflow-hidden border-top" style="border-color: #334155 !important;">
+        <div class="hero-bg-grid" style="opacity: 0.05;"></div>
+        <div class="container position-relative z-1 pt-5">
+            <div class="row g-5 mb-5">
+                <div class="col-12 col-lg-4">
+                    <a class="d-flex align-items-center gap-2 text-decoration-none mb-4" href="index.html">
+                        <i data-lucide="zap" class="text-primary" width="32" height="32"></i>
+                        <span class="font-heading fw-bold fs-4" style="color: var(--text-heading);">VoltCore<span class="text-primary">.</span></span>
+                    </a>
+                    <p class="text-muted small pe-lg-4">Premium electrical services for residential and commercial properties. Safe, reliable, and powered by innovation.</p>
+                    <div class="d-flex gap-3 mt-4">
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.1C2.5 7.1 2 9.5 2 12c0 2.5.5 4.9.5 4.9.3 1.2 1.3 2.1 2.5 2.4C7.5 20 12 20 12 20s4.5 0 7-.7c1.2-.3 2.2-1.2 2.5-2.4.5-2.4.5-4.9.5-4.9 0-2.5-.5-4.9-.5-4.9-.3-1.2-1.3-2.1-2.5-2.4C16.5 4 12 4 12 4s-4.5 0-7 .7c-1.2.3-2.2 1.2-2.5 2.4z"/><path d="m10 15 5-3-5-3v6z"/></svg>
+                          </a>
+                      </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Home Wiring</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Panel Upgrades</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Smart Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Lighting</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Commercial</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none hover-primary">About Us</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-muted text-decoration-none hover-primary">Pricing</a></li>
+                        <li class="mb-2"><a href="electrical-safety.html" class="text-muted text-decoration-none hover-primary">Safety Guide</a></li>
+                        <li class="mb-2"><a href="emergency-electrician.html" class="text-muted text-decoration-none hover-primary">Emergency</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none hover-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="map-pin" class="text-primary flex-shrink-0"></i>
+                            <span>123 Volt Avenue, Tech District<br>New York, NY 10001</span>
+                        </li>
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="phone" class="text-primary flex-shrink-0"></i>
+                            <span>+1 (555) 123-4567<br><small class="text-primary">24/7 Emergency Line</small></span>
+                        </li>
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="mail" class="text-primary flex-shrink-0"></i>
+                            <span>service@voltcore.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pt-4 border-top" style="border-color: #1e293b !important;">
+                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-muted small mb-0">&copy; 2026 VoltCore Electrical Services. All rights reserved.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted small text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

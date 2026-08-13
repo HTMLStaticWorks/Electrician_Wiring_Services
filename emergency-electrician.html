@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24/7 Emergency Electrician | VoltCore</title>
+    <meta name="description" content="Immediate 24/7 emergency electrical services. Rapid response for power outages, shorts, and hazards.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- PAGE LOADER -->
+    <div id="page-loader" style="background-color: #7f1d1d;">
+        <div class="spinner-border text-white mb-3" role="status"></div>
+        <div class="h4 text-white font-heading">Dispatching Response...</div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top py-3">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <i data-lucide="zap" class="text-primary" width="32" height="32"></i>
+                <span class="font-heading fw-bold fs-4">VoltCore<span class="text-primary">.</span></span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i data-lucide="menu" class="text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                <ul class="navbar-nav mb-2 mb-lg-0 me-lg-4">
+                    <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="services.html">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Specialized</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="electrical-safety.html">Electrical Safety</a></li>
+                            <li><a class="dropdown-item active text-danger fw-bold" href="emergency-electrician.html">Emergency Electrician</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link fw-medium" href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-link p-0 text-muted border border-secondary rounded-circle theme-toggle-btn d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" width="18" height="18"></i></button>
+                    <button class="btn btn-link p-0 text-muted border border-secondary rounded-circle rtl-toggle-btn d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;" aria-label="Toggle RTL"><i data-lucide="arrow-right-left" width="18" height="18"></i></button>
+                    <a href="login.html" class="btn btn-outline-electric d-none d-lg-inline-flex fw-bold px-4">Login</a>
+                    <a href="book-service.html" class="btn btn-electric d-none d-lg-inline-flex fw-bold px-4">Book Service</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero bg-dark text-white position-relative d-flex align-items-center text-center" style="padding-top: 140px; padding-bottom: 100px; min-height: 50vh;">
+            <div class="container position-relative z-1 gsap-fade-up">
+                <div class="d-inline-block bg-danger text-white rounded-circle p-4 mb-4 electric-pulse">
+                    <i data-lucide="alert-triangle" width="48" height="48"></i>
+                </div>
+                <h1 class="display-3 fw-bold font-heading mb-3 text-white">24/7 Emergency <span class="text-danger">Electrician</span></h1>
+                <p class="lead max-w-2xl mx-auto mb-5 text-light">Immediate dispatch. Expert troubleshooting. Safe resolution.</p>
+                
+                <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-danger border-opacity-50 d-inline-block shadow-lg mx-auto" style="backdrop-filter: blur(10px);">
+                    <p class="text-uppercase small fw-bold text-danger mb-2 tracking-widest">Call Now For Immediate Dispatch</p>
+                    <a href="tel:+1234567890" class="display-5 fw-bold text-white text-decoration-none hover-glow transition-fast d-block">
+                        +1 (555) 123-4567
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT QUALIFIES AS AN EMERGENCY (6 Cards) -->
+        <section class="py-6 bg-danger bg-opacity-10">
+            <div class="container">
+                <div class="text-center mb-5 gsap-fade-up">
+                    <h2 class="font-heading fw-bold text-danger">Do you have an electrical emergency?</h2>
+                    <p class="text-muted max-w-2xl mx-auto">If you are experiencing any of the following, call us immediately. Do not attempt to fix these issues yourself.</p>
+                </div>
+                
+                <div class="row g-4 gsap-stagger-container">
+                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
+                        <div class="electric-card border-danger border-opacity-25 h-100 bg-white p-0 overflow-hidden d-flex flex-column">
+                            <img src="assets/images/Power Outage.png" alt="Power Outage" class="w-100 object-fit-cover m-0" style="height: 180px;">
+                            <div class="p-4 flex-grow-1">
+                                <h5 class="fw-bold"><i data-lucide="power-off" class="text-danger me-2"></i> Power Outage</h5>
+                                <p class="text-muted small mb-0">Sudden, unexplained loss of power to part or all of your property while neighbors have power.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
+                        <div class="electric-card border-danger border-opacity-25 h-100 bg-white p-0 overflow-hidden d-flex flex-column">
+                            <img src="assets/images/Electrical Shocks.png" alt="Electrical Shocks" class="w-100 object-fit-cover m-0" style="height: 180px;">
+                            <div class="p-4 flex-grow-1">
+                                <h5 class="fw-bold"><i data-lucide="zap" class="text-danger me-2"></i> Electrical Shocks</h5>
+                                <p class="text-muted small mb-0">Receiving a mild shock when touching an appliance or switch.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
+                        <div class="electric-card border-danger border-opacity-25 h-100 bg-white p-0 overflow-hidden d-flex flex-column">
+                            <img src="assets/images/Burning Smell.png" alt="Burning Smell" class="w-100 object-fit-cover m-0" style="height: 180px;">
+                            <div class="p-4 flex-grow-1">
+                                <h5 class="fw-bold"><i data-lucide="flame" class="text-danger me-2"></i> Burning Smell</h5>
+                                <p class="text-muted small mb-0">A fishy or burning plastic smell coming from an outlet or the breaker panel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
+                        <div class="electric-card border-danger border-opacity-25 h-100 bg-white p-0 overflow-hidden d-flex flex-column">
+                            <img src="assets/images/Breaker Won't Reset.png" alt="Breaker Won't Reset" class="w-100 object-fit-cover m-0" style="height: 180px;">
+                            <div class="p-4 flex-grow-1">
+                                <h5 class="fw-bold"><i data-lucide="toggle-left" class="text-danger me-2"></i> Breaker Won't Reset</h5>
+                                <p class="text-muted small mb-0">A circuit breaker that continually trips and will not stay in the ON position.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
+                        <div class="electric-card border-danger border-opacity-25 h-100 bg-white p-0 overflow-hidden d-flex flex-column">
+                            <img src="assets/images/Water Damage.png" alt="Water Damage" class="w-100 object-fit-cover m-0" style="height: 180px;">
+                            <div class="p-4 flex-grow-1">
+                                <h5 class="fw-bold"><i data-lucide="cloud-lightning" class="text-danger me-2"></i> Water Damage</h5>
+                                <p class="text-muted small mb-0">Water leaking into light fixtures, outlets, or the main electrical panel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
+                        <div class="electric-card border-danger border-opacity-25 h-100 bg-white p-0 overflow-hidden d-flex flex-column">
+                            <img src="assets/images/Sparks & Arcing.png" alt="Sparks & Arcing" class="w-100 object-fit-cover m-0" style="height: 180px;">
+                            <div class="p-4 flex-grow-1">
+                                <h5 class="fw-bold"><i data-lucide="alert-circle" class="text-danger me-2"></i> Sparks & Arcing</h5>
+                                <p class="text-muted small mb-0">Visible sparks, popping sounds, or humming noises from electrical components.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESPONSE PROTOCOL (4 Steps) -->
+        <section class="py-6">
+            <div class="container">
+                <h2 class="font-heading fw-bold text-center mb-5 gsap-fade-up">Emergency Protocol</h2>
+                <div class="row g-4 text-center gsap-stagger-container">
+                    <div class="col-12 col-md-3 gsap-stagger-item position-relative">
+                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i data-lucide="phone-call" width="32" height="32"></i>
+                        </div>
+                        <h5 class="fw-bold">1. You Call</h5>
+                        <p class="text-muted small">Our dispatcher answers immediately and assesses the hazard level.</p>
+                        <div class="d-none d-md-block position-absolute top-25 start-100 translate-middle text-muted"><i data-lucide="arrow-right"></i></div>
+                    </div>
+                    <div class="col-12 col-md-3 gsap-stagger-item position-relative">
+                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i data-lucide="truck" width="32" height="32"></i>
+                        </div>
+                        <h5 class="fw-bold">2. We Dispatch</h5>
+                        <p class="text-muted small">The nearest fully-stocked emergency vehicle routes to your location.</p>
+                        <div class="d-none d-md-block position-absolute top-25 start-100 translate-middle text-muted"><i data-lucide="arrow-right"></i></div>
+                    </div>
+                    <div class="col-12 col-md-3 gsap-stagger-item position-relative">
+                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i data-lucide="search" width="32" height="32"></i>
+                        </div>
+                        <h5 class="fw-bold">3. We Diagnose</h5>
+                        <p class="text-muted small">Our master electrician identifies the source of the danger safely.</p>
+                        <div class="d-none d-md-block position-absolute top-25 start-100 translate-middle text-muted"><i data-lucide="arrow-right"></i></div>
+                    </div>
+                    <div class="col-12 col-md-3 gsap-stagger-item">
+                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i data-lucide="shield-check" width="32" height="32"></i>
+                        </div>
+                        <h5 class="fw-bold">4. We Resolve</h5>
+                        <p class="text-muted small">Immediate repairs are made to restore safety and power.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-5 gsap-fade-up">
+                    <a href="tel:+1234567890" class="btn btn-danger btn-lg electric-pulse px-5"><i data-lucide="phone" class="me-2"></i> 24/7 Hotline</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-darker pt-6 pb-4 position-relative overflow-hidden border-top" style="border-color: #334155 !important;">
+        <div class="hero-bg-grid" style="opacity: 0.05;"></div>
+        <div class="container position-relative z-1 pt-5">
+            <div class="row g-5 mb-5">
+                <div class="col-12 col-lg-4">
+                    <a class="d-flex align-items-center gap-2 text-decoration-none mb-4" href="index.html">
+                        <i data-lucide="zap" class="text-primary" width="32" height="32"></i>
+                        <span class="font-heading fw-bold fs-4" style="color: var(--text-heading);">VoltCore<span class="text-primary">.</span></span>
+                    </a>
+                    <p class="text-muted small pe-lg-4">Premium electrical services for residential and commercial properties. Safe, reliable, and powered by innovation.</p>
+                    <div class="d-flex gap-3 mt-4">
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                          </a>
+                          <a href="#" class="social-icon-footer rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 36px; height: 36px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.1C2.5 7.1 2 9.5 2 12c0 2.5.5 4.9.5 4.9.3 1.2 1.3 2.1 2.5 2.4C7.5 20 12 20 12 20s4.5 0 7-.7c1.2-.3 2.2-1.2 2.5-2.4.5-2.4.5-4.9.5-4.9 0-2.5-.5-4.9-.5-4.9-.3-1.2-1.3-2.1-2.5-2.4C16.5 4 12 4 12 4s-4.5 0-7 .7c-1.2.3-2.2 1.2-2.5 2.4z"/><path d="m10 15 5-3-5-3v6z"/></svg>
+                          </a>
+                      </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Home Wiring</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Panel Upgrades</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Smart Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Lighting</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Commercial</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none hover-primary">About Us</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-muted text-decoration-none hover-primary">Pricing</a></li>
+                        <li class="mb-2"><a href="electrical-safety.html" class="text-muted text-decoration-none hover-primary">Safety Guide</a></li>
+                        <li class="mb-2"><a href="emergency-electrician.html" class="text-muted text-decoration-none hover-primary">Emergency</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none hover-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="map-pin" class="text-primary flex-shrink-0"></i>
+                            <span>123 Volt Avenue, Tech District<br>New York, NY 10001</span>
+                        </li>
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="phone" class="text-primary flex-shrink-0"></i>
+                            <span>+1 (555) 123-4567<br><small class="text-primary">24/7 Emergency Line</small></span>
+                        </li>
+                        <li class="d-flex gap-3 mb-3">
+                            <i data-lucide="mail" class="text-primary flex-shrink-0"></i>
+                            <span>service@voltcore.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pt-4 border-top" style="border-color: #1e293b !important;">
+                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-muted small mb-0">&copy; 2026 VoltCore Electrical Services. All rights reserved.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted small text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
