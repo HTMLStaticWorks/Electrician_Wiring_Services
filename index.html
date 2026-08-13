@@ -31,7 +31,7 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top py-3">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top py-3">
         <div class="container-fluid px-4 px-lg-5">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
                 <i data-lucide="zap" style="color: var(--accent);" width="32" height="32"></i>
@@ -42,8 +42,8 @@
                 <i data-lucide="menu" class="text-primary"></i>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="mainNav">
-                <ul class="navbar-nav mb-2 mb-lg-0 me-lg-4">
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active fw-medium" href="index.html">Home</a>
                     </li>
@@ -271,7 +271,7 @@
             <div class="container">
                 <div class="text-center mb-5 gsap-fade-up">
                     <h2 class="font-heading fw-bold">Why Choose VoltCore</h2>
-                    <p class="text-muted max-w-2xl mx-auto">We bring decades of experience, unwavering safety standards, and cutting-edge technology to every project.</p>
+                    <p class="max-w-2xl mx-auto opacity-75">We bring decades of experience, unwavering safety standards, and cutting-edge technology to every project.</p>
                 </div>
                 <div class="row g-4 gsap-stagger-container">
                     <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
@@ -644,87 +644,117 @@
                 </div>
             </div>
         </section>
-        <!-- 13. TESTIMONIALS (6 Cards) -->
-        <section class="py-6">
+                <!-- 13. TESTIMONIALS (Slider) -->
+        <section class="py-6 overflow-hidden">
             <div class="container">
                 <div class="text-center mb-5 gsap-fade-up">
                     <h2 class="font-heading fw-bold">Client Success Stories</h2>
-                    <p class="text-muted max-w-2xl mx-auto">Don't just take our word for it—see what our satisfied customers say.</p>
+                    <p class="text-muted max-w-2xl mx-auto">Don't just take our word for it?see what our satisfied customers say.</p>
                 </div>
                 
-                <div class="row g-4 gsap-stagger-container">
-                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
-                        <div class="electric-card bg-secondary border-0 text-center">
-                            <div class="d-flex justify-content-center text-primary mb-3">
-                                <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
+                <div class="swiper testimonials-slider pb-5 gsap-fade-up">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="electric-card bg-secondary border-0 text-center h-100 d-flex flex-column">
+                                <div class="d-flex justify-content-center text-primary mb-3">
+                                    <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
+                                </div>
+                                <p class="mb-4 fst-italic flex-grow-1">"They arrived within 30 minutes during a late-night emergency and had our power restored safely. Highly professional."</p>
+                                <div class="d-flex align-items-center justify-content-center gap-3 mt-auto pt-3">
+                                    <img src="https://i.pravatar.cc/150?u=1" alt="John Smith" class="rounded-circle shadow-sm border border-2 border-primary" style="width: 50px; height: 50px; object-fit: cover;">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0">John Smith</h6>
+                                        <small class="text-muted">Homeowner</small>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="mb-4 fst-italic">"They arrived within 30 minutes during a late-night emergency and had our power restored safely. Highly professional."</p>
-                            <div class="d-flex flex-column align-items-center gap-2 mt-auto">
-                                <div class="bg-primary text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">JS</div>
-                                <div><h6 class="fw-bold mb-0">John Smith</h6><small class="text-muted">Homeowner</small></div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="electric-card bg-secondary border-0 text-center h-100 d-flex flex-column">
+                                <div class="d-flex justify-content-center text-primary mb-3">
+                                    <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
+                                </div>
+                                <p class="mb-4 fst-italic flex-grow-1">"VoltCore handled our entire office fit-out. Their attention to detail and adherence to safety codes was impressive."</p>
+                                <div class="d-flex align-items-center justify-content-center gap-3 mt-auto pt-3">
+                                    <img src="https://i.pravatar.cc/150?u=2" alt="Maria Rodriguez" class="rounded-circle shadow-sm border border-2 border-primary" style="width: 50px; height: 50px; object-fit: cover;">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0">Maria Rodriguez</h6>
+                                        <small class="text-muted">Business Owner</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="electric-card bg-secondary border-0 text-center h-100 d-flex flex-column">
+                                <div class="d-flex justify-content-center text-primary mb-3">
+                                    <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
+                                </div>
+                                <p class="mb-4 fst-italic flex-grow-1">"Upgraded our old panel and installed smart lighting. Clean, efficient work and very transparent pricing."</p>
+                                <div class="d-flex align-items-center justify-content-center gap-3 mt-auto pt-3">
+                                    <img src="https://i.pravatar.cc/150?u=3" alt="David Park" class="rounded-circle shadow-sm border border-2 border-primary" style="width: 50px; height: 50px; object-fit: cover;">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0">David Park</h6>
+                                        <small class="text-muted">Residential Client</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="electric-card bg-secondary border-0 text-center h-100 d-flex flex-column">
+                                <div class="d-flex justify-content-center text-primary mb-3">
+                                    <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
+                                </div>
+                                <p class="mb-4 fst-italic flex-grow-1">"Best electricians I've worked with. The team was polite, wore shoe covers, and left the workspace spotless."</p>
+                                <div class="d-flex align-items-center justify-content-center gap-3 mt-auto pt-3">
+                                    <img src="https://i.pravatar.cc/150?u=4" alt="Amanda Lee" class="rounded-circle shadow-sm border border-2 border-primary" style="width: 50px; height: 50px; object-fit: cover;">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0">Amanda Lee</h6>
+                                        <small class="text-muted">Homeowner</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="electric-card bg-secondary border-0 text-center h-100 d-flex flex-column">
+                                <div class="d-flex justify-content-center text-primary mb-3">
+                                    <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
+                                </div>
+                                <p class="mb-4 fst-italic flex-grow-1">"Installed EV chargers for our complex. Great communication throughout the process and flawless execution."</p>
+                                <div class="d-flex align-items-center justify-content-center gap-3 mt-auto pt-3">
+                                    <img src="https://i.pravatar.cc/150?u=5" alt="Thomas Chen" class="rounded-circle shadow-sm border border-2 border-primary" style="width: 50px; height: 50px; object-fit: cover;">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0">Thomas Chen</h6>
+                                        <small class="text-muted">Property Manager</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="electric-card bg-secondary border-0 text-center h-100 d-flex flex-column">
+                                <div class="d-flex justify-content-center text-primary mb-3">
+                                    <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
+                                </div>
+                                <p class="mb-4 fst-italic flex-grow-1">"We use VoltCore for all our industrial maintenance. Reliable, knowledgeable, and always on time."</p>
+                                <div class="d-flex align-items-center justify-content-center gap-3 mt-auto pt-3">
+                                    <img src="https://i.pravatar.cc/150?u=6" alt="Robert Johnson" class="rounded-circle shadow-sm border border-2 border-primary" style="width: 50px; height: 50px; object-fit: cover;">
+                                    <div class="text-start">
+                                        <h6 class="fw-bold mb-0">Robert Johnson</h6>
+                                        <small class="text-muted">Factory Operations</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
-                        <div class="electric-card bg-secondary border-0 text-center">
-                            <div class="d-flex justify-content-center text-primary mb-3">
-                                <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
-                            </div>
-                            <p class="mb-4 fst-italic">"VoltCore handled our entire office fit-out. Their attention to detail and adherence to safety codes was impressive."</p>
-                            <div class="d-flex flex-column align-items-center gap-2 mt-auto">
-                                <div class="bg-primary text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">MR</div>
-                                <div><h6 class="fw-bold mb-0">Maria Rodriguez</h6><small class="text-muted">Business Owner</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
-                        <div class="electric-card bg-secondary border-0 text-center">
-                            <div class="d-flex justify-content-center text-primary mb-3">
-                                <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
-                            </div>
-                            <p class="mb-4 fst-italic">"Upgraded our old panel and installed smart lighting. Clean, efficient work and very transparent pricing."</p>
-                            <div class="d-flex flex-column align-items-center gap-2 mt-auto">
-                                <div class="bg-primary text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">DP</div>
-                                <div><h6 class="fw-bold mb-0">David Park</h6><small class="text-muted">Residential Client</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
-                        <div class="electric-card bg-secondary border-0 text-center">
-                            <div class="d-flex justify-content-center text-primary mb-3">
-                                <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
-                            </div>
-                            <p class="mb-4 fst-italic">"Best electricians I've worked with. The team was polite, wore shoe covers, and left the workspace spotless."</p>
-                            <div class="d-flex flex-column align-items-center gap-2 mt-auto">
-                                <div class="bg-primary text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">AL</div>
-                                <div><h6 class="fw-bold mb-0">Amanda Lee</h6><small class="text-muted">Homeowner</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
-                        <div class="electric-card bg-secondary border-0 text-center">
-                            <div class="d-flex justify-content-center text-primary mb-3">
-                                <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
-                            </div>
-                            <p class="mb-4 fst-italic">"Installed EV chargers for our complex. Great communication throughout the process and flawless execution."</p>
-                            <div class="d-flex flex-column align-items-center gap-2 mt-auto">
-                                <div class="bg-primary text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">TC</div>
-                                <div><h6 class="fw-bold mb-0">Thomas Chen</h6><small class="text-muted">Property Manager</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 gsap-stagger-item">
-                        <div class="electric-card bg-secondary border-0 text-center">
-                            <div class="d-flex justify-content-center text-primary mb-3">
-                                <i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i><i data-lucide="star" class="icon-bright fill-current"></i>
-                            </div>
-                            <p class="mb-4 fst-italic">"We use VoltCore for all our industrial maintenance. Reliable, knowledgeable, and always on time."</p>
-                            <div class="d-flex flex-column align-items-center gap-2 mt-auto">
-                                <div class="bg-primary text-dark fw-bold rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">RJ</div>
-                                <div><h6 class="fw-bold mb-0">Robert Johnson</h6><small class="text-muted">Factory Operations</small></div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Pagination & Navigation -->
+                    <div class="swiper-pagination mt-4 position-relative bottom-0"></div>
+                    <div class="swiper-button-prev text-primary"></div>
+                    <div class="swiper-button-next text-primary"></div>
                 </div>
             </div>
         </section>
@@ -736,8 +766,8 @@
         <div class="hero-bg-grid" style="opacity: 0.05;"></div>
         <div class="container position-relative z-1 pt-5">
             <div class="row g-5 mb-5">
-                <div class="col-12 col-lg-4">
-                    <a class="d-flex align-items-center gap-2 text-decoration-none mb-4" href="index.html">
+                <div class="col-12 col-md-6 col-lg-4">
+                      <a class="d-flex align-items-center gap-2 text-decoration-none mb-4" href="index.html">
                         <i data-lucide="zap" class="text-primary" width="32" height="32"></i>
                         <span class="font-heading fw-bold fs-4" style="color: var(--text-heading);">VoltCore<span class="text-primary">.</span></span>
                     </a>
@@ -757,7 +787,7 @@
                           </a>
                       </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-2">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
                     <h5 class="fw-bold mb-4">Services</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Home Wiring</a></li>
@@ -767,7 +797,7 @@
                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-primary">Commercial</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-2">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
                     <h5 class="fw-bold mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none hover-primary">About Us</a></li>
@@ -777,9 +807,9 @@
                         <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none hover-primary">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <h5 class="fw-bold mb-4">Contact Info</h5>
-                    <ul class="list-unstyled text-muted small">
+                <div class="col-12 col-md-6 col-lg-4">
+                      <h5 class="fw-bold mb-4">Contact Info</h5>
+                      <ul class="list-unstyled text-muted small footer-contact-list">
                         <li class="d-flex gap-3 mb-3">
                             <i data-lucide="map-pin" class="text-primary flex-shrink-0"></i>
                             <span>123 Volt Avenue, Tech District<br>New York, NY 10001</span>
@@ -817,8 +847,13 @@
     <!-- CountUp JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top">
+        <i data-lucide="arrow-up" width="24" height="24"></i>
+    </button>
 </body>
 </html>
 

@@ -295,7 +295,7 @@ img {
 }
 
 /* Tablet & Mobile Overrides */
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
     .navbar-collapse {
         position: fixed;
         top: 0;
@@ -399,13 +399,13 @@ img {
     .navbar-collapse > .d-flex.align-items-center .theme-toggle-btn {
         grid-area: toggle1;
         justify-self: end;
-        margin-right: -0.5rem;
+        margin-right: 0.5rem;
     }
     
     .navbar-collapse > .d-flex.align-items-center .rtl-toggle-btn {
         grid-area: toggle2;
         justify-self: start;
-        margin-left: -0.5rem;
+        margin-left: 0.5rem;
     }
     
     .navbar-collapse > .d-flex.align-items-center .btn-outline-electric {
@@ -681,3 +681,116 @@ img {
 .mt-6 { margin-top: 5rem !important; }
 .mb-6 { margin-bottom: 5rem !important; }
 
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    background-color: var(--primary);
+    color: var(--dark);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Toggles for Login/Register Pages */
+@media (min-width: 768px) {
+    .auth-toggles-responsive {
+        position: absolute !important;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 1030;
+    }
+    [dir="rtl"] .auth-toggles-responsive {
+        right: auto !important;
+        left: 1.5rem !important;
+    }
+}
+
+/* Ensure bg-card uses responsive theme variable */
+.bg-card {
+    background-color: var(--bg-card) !important;
+}
+
+/* Ensure placeholders use responsive colors */
+.bg-secondary::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.8;
+}
+.form-control::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.8;
+}
+
+/* Responsive text color class */
+.text-responsive-heading {
+    color: var(--text-heading) !important;
+}
+
+/* Force bright icons/text in dark mode for auth toggles and social buttons */
+[data-theme="dark"] .theme-toggle-btn,
+[data-theme="dark"] .rtl-toggle-btn,
+[data-theme="dark"] .auth-social-btn,
+[data-theme="dark"] .auth-social-btn svg {
+    color: var(--white) !important;
+}
+
+/* Fix Contact Info alignment on mobile */
+@media (max-width: 768px) {
+    .footer-contact-list li span {
+        text-align: left !important;
+    }
+}
+
+/* Fix Contact Info jagged alignment on mobile */
+@media (max-width: 768px) {
+    .footer-contact-list {
+        display: inline-block;
+        text-align: left;
+    }
+    .footer-contact-list .d-flex {
+        justify-content: flex-start !important;
+    }
+}
+
+/* Responsive Floating Card (About Page) */
+@media (max-width: 991px) {
+    .responsive-floating-card {
+        position: relative !important;
+        transform: none !important;
+        margin: 1.5rem auto 0 auto !important;
+        text-align: center;
+        display: block !important;
+        width: 100%;
+        max-width: 300px;
+        bottom: auto !important;
+        right: auto !important;
+        left: auto !important;
+    }
+}
