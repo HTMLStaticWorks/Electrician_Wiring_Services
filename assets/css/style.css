@@ -17,37 +17,37 @@
     --light: #F8FAFC;
     --white: #FFFFFF;
     --electric-glow: #FDE68A;
-    
+
     /* Backgrounds */
     --bg-main: var(--light);
     --bg-card: var(--white);
     --bg-secondary: #f1f5f9;
     --bg-darker: #0b1120;
-    
+
     /* Text */
     --text-main: #1e293b;
     --text-muted: #64748b;
     --text-heading: var(--dark);
-    
+
     /* Border */
     --border-color: #e2e8f0;
-    
+
     /* Typography */
     --font-sans: 'Inter', sans-serif;
     --font-heading: 'Space Grotesk', sans-serif;
-    
+
     /* Shadow */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-glow: 0 0 15px rgba(245, 158, 11, 0.4);
-    
+
     /* Radius */
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
-    
+
     /* Transitions */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,14 +69,23 @@
 
 /* Navbar in Dark Mode */
 [data-theme="dark"] .navbar .nav-link,
-[data-theme="dark"] .navbar .navbar-brand span {
+[data-theme="dark"] .navbar .navbar-brand span,
+[data-theme="dark"] .navbar .dropdown-item {
     color: var(--white) !important;
+}
+
+[data-theme="dark"] .navbar .dropdown-menu {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
 }
 
 [data-theme="dark"] .navbar .nav-link:hover,
 [data-theme="dark"] .navbar .nav-link:focus,
-[data-theme="dark"] .navbar .nav-link.active {
+[data-theme="dark"] .navbar .nav-link.active,
+[data-theme="dark"] .navbar .dropdown-item:hover,
+[data-theme="dark"] .navbar .dropdown-item:focus {
     color: var(--primary) !important;
+    background-color: transparent !important;
 }
 
 /* Icons specifically stay bright in dark mode - achieved by using currentColor combined with text-primary or explicit colors */
@@ -93,7 +102,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    /* Removed scroll-behavior: smooth as it breaks position: fixed on iOS Safari */
 }
 
 body {
@@ -101,11 +110,16 @@ body {
     background-color: var(--bg-main);
     color: var(--text-main);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip; /* clip prevents horizontal scroll without breaking fixed/sticky positioning */
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--text-heading);
     font-weight: 700;
@@ -113,16 +127,27 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
 
 a {
     color: var(--accent);
     text-decoration: none;
     transition: color var(--transition-fast);
 }
-a:hover { color: var(--primary); }
+
+a:hover {
+    color: var(--primary);
+}
 
 img {
     max-width: 100%;
@@ -131,17 +156,39 @@ img {
 }
 
 /* Typography Utilities */
-.text-primary-brand { color: var(--primary); }
-.text-secondary-brand { color: var(--secondary); }
-.text-accent { color: var(--accent); }
+.text-primary-brand {
+    color: var(--primary);
+}
+
+.text-secondary-brand {
+    color: var(--secondary);
+}
+
+.text-accent {
+    color: var(--accent);
+}
 
 /* ============================================================
    ANIMATION SYSTEM (Electrical Effects)
 ============================================================ */
 @keyframes electricPulse {
-    0% { opacity: 0.6; filter: blur(2px); box-shadow: 0 0 0px var(--primary); }
-    50% { opacity: 1; filter: blur(0px); box-shadow: 0 0 15px var(--primary); }
-    100% { opacity: 0.6; filter: blur(2px); box-shadow: 0 0 0px var(--primary); }
+    0% {
+        opacity: 0.6;
+        filter: blur(2px);
+        box-shadow: 0 0 0px var(--primary);
+    }
+
+    50% {
+        opacity: 1;
+        filter: blur(0px);
+        box-shadow: 0 0 15px var(--primary);
+    }
+
+    100% {
+        opacity: 0.6;
+        filter: blur(2px);
+        box-shadow: 0 0 0px var(--primary);
+    }
 }
 
 .electric-pulse {
@@ -149,9 +196,20 @@ img {
 }
 
 @keyframes energyFlow {
-    0% { transform: translateY(0) scale(1); opacity: 0.5; }
-    50% { transform: translateY(-10px) scale(1.1); opacity: 1; }
-    100% { transform: translateY(0) scale(1); opacity: 0.5; }
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+    }
 }
 
 .energy-flow {
@@ -159,8 +217,13 @@ img {
 }
 
 @keyframes flowLine {
-    0% { stroke-dashoffset: 1000; }
-    100% { stroke-dashoffset: 0; }
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 .circuit-line {
@@ -179,7 +242,10 @@ img {
 ============================================================ */
 #page-loader {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: var(--bg-main);
     z-index: 9999;
     display: flex;
@@ -203,7 +269,10 @@ img {
 .loader-circuit::before {
     content: '';
     position: absolute;
-    top: -4px; left: -4px; width: 100%; height: 100%;
+    top: -4px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
     border: 4px solid transparent;
     border-top-color: var(--primary);
     border-radius: 50%;
@@ -217,8 +286,13 @@ img {
 }
 
 @keyframes loaderSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* ============================================================
@@ -243,8 +317,11 @@ img {
 .btn-electric::before {
     content: '';
     position: absolute;
-    top: 0; left: -100%; width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.5s ease;
     z-index: -1;
 }
@@ -283,13 +360,20 @@ img {
    NAVBAR
 ============================================================ */
 .navbar-custom {
-    background: rgba(var(--bg-main-rgb), 0.8); /* Need to define rgb for this or use transparent color */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1030 !important;
+    transform: translateZ(0) !important;
+    /* Removed backdrop-filter to fix critical iOS Safari bug where fixed positioning breaks */
+    background: rgba(var(--bg-main-rgb), 0.8);
     background-color: var(--bg-main);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     transition: background-color var(--transition-normal);
 }
+
 [data-theme="dark"] .navbar-custom {
     background-color: rgba(15, 23, 42, 0.9);
 }
@@ -306,20 +390,20 @@ img {
         z-index: 1000;
         transition: right var(--transition-normal);
         padding: 80px 20px 20px;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
     }
-    
+
     [dir="rtl"] .navbar-collapse {
         right: auto;
         left: -100%;
-        box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
         transition: left var(--transition-normal);
     }
-    
+
     .navbar-collapse.show {
         right: 0;
     }
-    
+
     [dir="rtl"] .navbar-collapse.show {
         left: 0;
         right: auto;
@@ -331,22 +415,22 @@ img {
         outline: none;
         padding: 10px;
     }
-    
+
     .navbar-brand {
         margin-right: auto;
     }
-    
+
     /* Mobile Menu Navigation Alignment */
     .navbar-collapse .navbar-nav {
         align-items: center;
         text-align: center;
         width: 100%;
     }
-    
+
     .navbar-collapse .navbar-nav .nav-item {
         width: 100%;
     }
-    
+
     .navbar-collapse .dropdown-menu {
         position: static !important;
         float: none !important;
@@ -359,11 +443,11 @@ img {
         width: 100%;
         box-shadow: none;
     }
-    
+
     .navbar-collapse .dropdown-menu.show {
         display: block !important;
     }
-    
+
     .navbar-collapse .dropdown-menu li {
         width: 100%;
         display: block;
@@ -376,17 +460,17 @@ img {
         white-space: normal;
         text-align: center;
     }
-    
+
     .navbar-collapse .dropdown-item::before {
         content: "- ";
         margin-right: 8px;
     }
 
     /* Mobile CTA and Toggles Alignment */
-    .navbar-collapse > .d-flex.align-items-center {
+    .navbar-collapse>.d-flex.align-items-center {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "toggle1 toggle2"
             "btn1 btn1"
             "btn2 btn2";
@@ -395,27 +479,27 @@ img {
         width: 100%;
         margin-top: 1.5rem;
     }
-    
-    .navbar-collapse > .d-flex.align-items-center .theme-toggle-btn {
+
+    .navbar-collapse>.d-flex.align-items-center .theme-toggle-btn {
         grid-area: toggle1;
         justify-self: end;
         margin-right: 0.5rem;
     }
-    
-    .navbar-collapse > .d-flex.align-items-center .rtl-toggle-btn {
+
+    .navbar-collapse>.d-flex.align-items-center .rtl-toggle-btn {
         grid-area: toggle2;
         justify-self: start;
         margin-left: 0.5rem;
     }
-    
-    .navbar-collapse > .d-flex.align-items-center .btn-outline-electric {
+
+    .navbar-collapse>.d-flex.align-items-center .btn-outline-electric {
         grid-area: btn1;
         display: flex !important;
         width: 100%;
         justify-content: center;
     }
-    
-    .navbar-collapse > .d-flex.align-items-center .btn-electric {
+
+    .navbar-collapse>.d-flex.align-items-center .btn-electric {
         grid-area: btn2;
         display: flex !important;
         width: 100%;
@@ -448,24 +532,37 @@ img {
 .electric-card::after {
     content: '';
     position: absolute;
-    bottom: 0; left: 0; width: 100%; height: 3px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
     background: linear-gradient(90deg, var(--primary), var(--accent));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform var(--transition-normal);
 }
-[dir="rtl"] .electric-card::after { transform-origin: right; }
-.electric-card:hover::after { transform: scaleX(1); }
+
+[dir="rtl"] .electric-card::after {
+    transform-origin: right;
+}
+
+.electric-card:hover::after {
+    transform: scaleX(1);
+}
 
 .card-icon-wrap {
-    width: 64px; height: 64px;
+    width: 64px;
+    height: 64px;
     border-radius: var(--radius-md);
     background-color: rgba(245, 158, 11, 0.1);
-    display: flex; justify-content: center; align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1.5rem;
     color: var(--primary);
     transition: all var(--transition-normal);
 }
+
 .electric-card:hover .card-icon-wrap {
     background-color: var(--primary);
     color: var(--dark);
@@ -485,9 +582,13 @@ img {
 }
 
 .hero-bg-grid {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(var(--border-color) 1px, transparent 1px),
-                      linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+        linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.2;
     z-index: 0;
@@ -506,6 +607,7 @@ img {
     perspective: 1000px;
     padding: 4rem 0;
 }
+
 .command-panel {
     background: var(--bg-darker);
     border: 1px solid #334155;
@@ -517,6 +619,7 @@ img {
     position: relative;
     color: #f1f5f9;
 }
+
 .command-panel:hover {
     transform: rotateX(0) rotateY(0);
 }
@@ -528,35 +631,49 @@ img {
     width: 100%;
     perspective: 800px;
 }
+
 .map-node {
     position: absolute;
-    width: 20px; height: 20px;
+    width: 20px;
+    height: 20px;
     background-color: var(--primary);
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 15px var(--primary);
     transition: transform 0.3s;
 }
+
 .map-node:hover {
     transform: scale(1.5);
 }
+
 .map-tooltip {
     position: absolute;
-    top: -40px; left: 50%; transform: translateX(-50%);
-    background: var(--dark); color: var(--white);
-    padding: 5px 10px; border-radius: 4px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 4px;
     font-size: 0.8rem;
-    opacity: 0; visibility: hidden; transition: all 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
     white-space: nowrap;
 }
+
 .map-node:hover .map-tooltip {
-    opacity: 1; visibility: visible; top: -50px;
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
 }
 
 /* ============================================================
    MOBILE RESPONSIVE TWEAKS & STRICT RULES
 ============================================================ */
 @media (max-width: 576px) {
+
     /* Mobile Buttons Strict Rule */
     .mobile-btn-stack {
         display: flex !important;
@@ -564,6 +681,7 @@ img {
         gap: 1rem;
         width: 100%;
     }
+
     .mobile-btn-stack .btn-electric,
     .mobile-btn-stack .btn-outline-electric {
         width: 100% !important;
@@ -584,16 +702,19 @@ img {
     gap: 0.5rem;
     z-index: 10;
 }
+
 [dir="rtl"] .auth-controls-mobile {
     right: auto;
     left: 1rem;
 }
+
 @media (min-width: 769px) {
     .auth-controls-mobile {
         position: fixed;
         top: 2rem;
         right: 2rem;
     }
+
     [dir="rtl"] .auth-controls-mobile {
         right: auto;
         left: 2rem;
@@ -602,16 +723,19 @@ img {
 
 /* Footer Strict Layout & Centering */
 @media (max-width: 576px) {
-    footer .row > div {
+    footer .row>div {
         margin-bottom: 2rem;
     }
 }
+
 @media (max-width: 768px) {
+
     footer,
     footer .text-md-start,
     footer .text-md-end {
         text-align: center !important;
     }
+
     footer .d-flex {
         justify-content: center !important;
     }
@@ -627,31 +751,52 @@ img {
     }
 }
 
-.text-muted { color: var(--text-muted) !important; }
+.text-muted {
+    color: var(--text-muted) !important;
+}
 
 
-.social-icon-footer { color: var(--text-heading) !important; border: 1px solid var(--border-color) !important; }
-.social-icon-footer:hover { color: var(--primary) !important; border-color: var(--primary) !important; }
+.social-icon-footer {
+    color: var(--text-heading) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.social-icon-footer:hover {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
 
 
 /* Custom Spacing */
-.py-6 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
-.pt-6 { padding-top: 5rem !important; }
-.pb-6 { padding-bottom: 5rem !important; }
+.py-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.pt-6 {
+    padding-top: 5rem !important;
+}
+
+.pb-6 {
+    padding-bottom: 5rem !important;
+}
 
 /* RTL Mode Layout Fixes */
-[dir="rtl"] .input-group > .form-control,
-[dir="rtl"] .input-group > .input-group-text {
+[dir="rtl"] .input-group>.form-control,
+[dir="rtl"] .input-group>.input-group-text {
     border-radius: var(--bs-border-radius, 0.375rem) !important;
 }
-[dir="rtl"] .input-group > .form-control-lg {
+
+[dir="rtl"] .input-group>.form-control-lg {
     border-radius: var(--bs-border-radius-lg, 0.5rem) !important;
 }
-[dir="rtl"] .input-group > :not(:first-child):not(.dropdown-menu) {
+
+[dir="rtl"] .input-group> :not(:first-child):not(.dropdown-menu) {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
 }
-[dir="rtl"] .input-group > :not(:last-child):not(.dropdown-menu) {
+
+[dir="rtl"] .input-group> :not(:last-child):not(.dropdown-menu) {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }
@@ -663,6 +808,7 @@ img {
         margin-left: 1.5rem !important;
     }
 }
+
 [dir="rtl"] .navbar-brand {
     margin-right: 0 !important;
     margin-left: 1rem !important;
@@ -672,14 +818,24 @@ img {
 [dir="rtl"] .accordion-button {
     text-align: right !important;
 }
+
 [dir="rtl"] .accordion-button::after {
     margin-right: auto !important;
     margin-left: 0 !important;
 }
 
-.my-6 { margin-top: 5rem !important; margin-bottom: 5rem !important; }
-.mt-6 { margin-top: 5rem !important; }
-.mb-6 { margin-bottom: 5rem !important; }
+.my-6 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+}
+
+.mt-6 {
+    margin-top: 5rem !important;
+}
+
+.mb-6 {
+    margin-bottom: 5rem !important;
+}
 
 
 /* Back to Top Button */
@@ -727,6 +883,7 @@ img {
         right: 1.5rem;
         z-index: 1030;
     }
+
     [dir="rtl"] .auth-toggles-responsive {
         right: auto !important;
         left: 1.5rem !important;
@@ -743,6 +900,7 @@ img {
     color: var(--text-muted) !important;
     opacity: 0.8;
 }
+
 .form-control::placeholder {
     color: var(--text-muted) !important;
     opacity: 0.8;
@@ -761,23 +919,48 @@ img {
     color: var(--white) !important;
 }
 
-/* Fix Contact Info alignment on mobile */
-@media (max-width: 768px) {
+/* Footer columns – left-aligned on tablet and desktop */
+@media (min-width: 768px) {
+    footer .col-12 {
+        text-align: left !important;
+    }
+
+    footer .col-12 .d-flex.gap-3,
+    .footer-contact-list .d-flex {
+        justify-content: flex-start !important;
+    }
+
     .footer-contact-list li span {
         text-align: left !important;
     }
 }
 
-/* Fix Contact Info jagged alignment on mobile */
-@media (max-width: 768px) {
+/* Footer columns – center-aligned on mobile */
+@media (max-width: 767px) {
+    footer .col-12 {
+        text-align: center !important;
+    }
+
+    footer .col-12 .d-flex.gap-3,
+    .footer-contact-list .d-flex {
+        justify-content: center !important;
+    }
+
+    .footer-contact-list li span {
+        text-align: center !important;
+    }
+
     .footer-contact-list {
         display: inline-block;
         text-align: left;
+        /* Keep the actual text block left-aligned internally if needed, but the container is centered */
     }
+
     .footer-contact-list .d-flex {
-        justify-content: flex-start !important;
+        text-align: left;
     }
 }
+
 
 /* Responsive Floating Card (About Page) */
 @media (max-width: 991px) {
@@ -793,4 +976,53 @@ img {
         right: auto !important;
         left: auto !important;
     }
+}
+
+/* Footer Menu Link Hover Effects */
+.hover-primary {
+    transition: color 0.3s ease;
+}
+
+.hover-primary:hover,
+footer a.text-muted:hover {
+    color: var(--primary) !important;
+}
+
+/* Bootstrap Primary Utility Overrides */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+/* FAQ Accordion – Dark Mode Contrast Fix */
+[data-theme="dark"] .accordion-item {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .accordion-button {
+    background-color: var(--bg-card) !important;
+    color: var(--text-heading) !important;
+    box-shadow: none !important;
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: var(--bg-card) !important;
+    color: var(--primary) !important;
+}
+
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) brightness(2);
+}
+
+[data-theme="dark"] .accordion-body {
+    background-color: var(--bg-card) !important;
+    color: var(--text-muted) !important;
 }
