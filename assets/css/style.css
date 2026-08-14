@@ -102,7 +102,7 @@
 }
 
 html {
-    /* Removed scroll-behavior: smooth as it breaks position: fixed on iOS Safari */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -728,7 +728,7 @@ img {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     footer,
     footer .text-md-start,
@@ -941,13 +941,16 @@ img {
         text-align: center !important;
     }
 
-    footer .col-12 .d-flex.gap-3,
-    .footer-contact-list .d-flex {
+    footer .col-12 .d-flex.gap-3 {
         justify-content: center !important;
     }
 
+    footer .col-12 .footer-contact-list .d-flex {
+        justify-content: flex-start !important;
+    }
+
     .footer-contact-list li span {
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .footer-contact-list {
@@ -994,7 +997,7 @@ footer a.text-muted:hover {
 }
 
 .bg-primary {
-    background-color: var(--primary) !important;
+    background-color: rgba(245, 158, 11, var(--bs-bg-opacity, 1)) !important;
 }
 
 .border-primary {
