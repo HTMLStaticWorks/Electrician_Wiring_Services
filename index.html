@@ -450,10 +450,10 @@
                         <h4 class="font-heading fw-bold mb-3" style="color: var(--text-heading);">Electrical Safety Scanner</h4>
                         <p class="text-muted small mx-auto" style="max-width: 500px;">Our advanced diagnostic tools instantly detect overloaded circuits, degraded wiring, and potential fire hazards in your panel before they become dangerous.</p>
                     </div>
-                    <div class="position-relative rounded-4 p-4 mx-auto overflow-hidden shadow-lg" style="max-width: 700px; background-color: #0f172a; border: 1px solid #334155;">
+                        <div class="position-relative rounded-4 p-3 p-md-4 mx-auto overflow-hidden shadow-lg" style="max-width: 700px; background-color: #0f172a; border: 1px solid #334155;">
                         
-                        <!-- Background SVG Wiring -->
-                        <svg class="position-absolute top-0 start-0 w-100 h-100" viewBox="0 0 700 200" preserveAspectRatio="none" style="z-index: 0; pointer-events: none;">
+                        <!-- Background SVG Wiring (hidden on mobile) -->
+                        <svg class="position-absolute top-0 start-0 w-100 h-100 d-none d-md-block" viewBox="0 0 700 200" preserveAspectRatio="none" style="z-index: 0; pointer-events: none;">
                             <!-- Wires to left panel -->
                             <path d="M 350 100 L 250 100 L 250 50 L 175 50" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5 5" class="wire-anim"/>
                             <path d="M 350 100 L 175 100" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5 5" class="wire-anim"/>
@@ -466,45 +466,49 @@
                         </svg>
 
                         <!-- Content -->
-                        <div class="d-flex justify-content-between align-items-center position-relative z-1 h-100" style="min-height: 200px;">
+                        <div class="row align-items-center gx-2 gy-3 position-relative z-1">
                             
                             <!-- Left Breakers -->
-                            <div class="d-flex flex-column gap-3 w-25">
-                                <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
-                                    <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 12px; height: 12px; box-shadow: 0 0 10px #10b981 !important;"></div>
-                                    <div class="small text-white opacity-75 lh-sm text-nowrap" style="font-size: 0.75rem;">Circuit 1 <br> <span class="text-success fw-bold">120V OK</span></div>
-                                </div>
-                                <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
-                                    <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 12px; height: 12px; box-shadow: 0 0 10px #10b981 !important;"></div>
-                                    <div class="small text-white opacity-75 lh-sm text-nowrap" style="font-size: 0.75rem;">Circuit 2 <br> <span class="text-success fw-bold">120V OK</span></div>
-                                </div>
-                                <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
-                                    <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 12px; height: 12px; box-shadow: 0 0 10px #10b981 !important;"></div>
-                                    <div class="small text-white opacity-75 lh-sm text-nowrap" style="font-size: 0.75rem;">Circuit 3 <br> <span class="text-success fw-bold">240V OK</span></div>
+                            <div class="col-5 col-md-4">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
+                                        <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 10px; height: 10px; box-shadow: 0 0 10px #10b981 !important;"></div>
+                                        <div class="text-white opacity-75 lh-sm" style="font-size: 0.7rem;">Circuit 1 <br> <span class="text-success fw-bold">120V OK</span></div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
+                                        <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 10px; height: 10px; box-shadow: 0 0 10px #10b981 !important;"></div>
+                                        <div class="text-white opacity-75 lh-sm" style="font-size: 0.7rem;">Circuit 2 <br> <span class="text-success fw-bold">120V OK</span></div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
+                                        <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 10px; height: 10px; box-shadow: 0 0 10px #10b981 !important;"></div>
+                                        <div class="text-white opacity-75 lh-sm" style="font-size: 0.7rem;">Circuit 3 <br> <span class="text-success fw-bold">240V OK</span></div>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Center CPU -->
-                            <div class="w-25 text-center position-relative">
+                            <div class="col-2 col-md-4 text-center position-relative">
                                 <div class="rounded-circle d-inline-flex pulse-ring">
-                                    <img src="assets/images/thermal_scan_demo.png" class="rounded-circle shadow" style="width: 80px; height: 80px; object-fit: cover;" alt="Scan">
+                                    <img src="assets/images/thermal_scan_demo.png" class="rounded-circle shadow" style="width: 56px; height: 56px; object-fit: cover;" alt="Scan">
                                 </div>
-                                <div class="text-white mt-2 small fw-bold tracking-wide text-nowrap" style="font-size: 0.75rem;">DIAGNOSTICS</div>
+                                <div class="text-white mt-1 fw-bold d-none d-sm-block" style="font-size: 0.65rem; letter-spacing: 0.05em;">DIAGNOSTICS</div>
                             </div>
 
                             <!-- Right Breakers -->
-                            <div class="d-flex flex-column gap-3 w-25">
-                                <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
-                                    <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 12px; height: 12px; box-shadow: 0 0 10px #10b981 !important;"></div>
-                                    <div class="small text-white opacity-75 lh-sm text-nowrap" style="font-size: 0.75rem;">Circuit 4 <br> <span class="text-success fw-bold">120V OK</span></div>
-                                </div>
-                                <div class="d-flex align-items-center gap-2 bg-danger bg-opacity-25 p-2 rounded border border-danger">
-                                    <div class="bg-danger rounded-circle shadow-sm flex-shrink-0" style="width: 12px; height: 12px; box-shadow: 0 0 10px #ef4444 !important; animation: blink 1s infinite;"></div>
-                                    <div class="small text-white opacity-75 lh-sm text-nowrap" style="font-size: 0.75rem;">Main Panel <br> <span class="text-danger fw-bold">OVERLOAD</span></div>
-                                </div>
-                                <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
-                                    <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 12px; height: 12px; box-shadow: 0 0 10px #10b981 !important;"></div>
-                                    <div class="small text-white opacity-75 lh-sm text-nowrap" style="font-size: 0.75rem;">Circuit 6 <br> <span class="text-success fw-bold">240V OK</span></div>
+                            <div class="col-5 col-md-4">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
+                                        <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 10px; height: 10px; box-shadow: 0 0 10px #10b981 !important;"></div>
+                                        <div class="text-white opacity-75 lh-sm" style="font-size: 0.7rem;">Circuit 4 <br> <span class="text-success fw-bold">120V OK</span></div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 bg-danger bg-opacity-25 p-2 rounded border border-danger">
+                                        <div class="bg-danger rounded-circle shadow-sm flex-shrink-0" style="width: 10px; height: 10px; box-shadow: 0 0 10px #ef4444 !important; animation: blink 1s infinite;"></div>
+                                        <div class="text-white opacity-75 lh-sm" style="font-size: 0.7rem;">Main Panel <br> <span class="text-danger fw-bold">OVERLOAD</span></div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 bg-dark bg-opacity-50 p-2 rounded border border-secondary">
+                                        <div class="bg-success rounded-circle shadow-sm flex-shrink-0" style="width: 10px; height: 10px; box-shadow: 0 0 10px #10b981 !important;"></div>
+                                        <div class="text-white opacity-75 lh-sm" style="font-size: 0.7rem;">Circuit 6 <br> <span class="text-success fw-bold">240V OK</span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
